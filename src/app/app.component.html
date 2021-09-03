@@ -1,0 +1,78 @@
+<div class="container-fluid bg-info p-1 text-light">
+  <h3 class="text-right">Date : {{mydate | date : 'dd/MM/YYYY , hh:mm:ss'}}</h3>
+  <h3 class="text-center corona-tracker">World Corona Tracker App</h3>
+</div>
+
+<div class="container-fluid bg-img"></div>
+
+<div class="container mt-3">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <h4 class="text-right">Country : </h4>
+    </div>
+
+    <div class="form-group col-md-4">
+      <select (change)="getCountry($event.target.value)" class="form-control custom-select">
+        <option selected="selected">Choose...</option>
+        <option *ngFor="let c of countries">
+          {{c.Country}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4">
+      <button (click)="getDetails()" class="btn btn-primary">Submit</button>
+    </div>
+
+  </div>
+
+</div>
+
+<hr class="hori">
+
+<div class="container bg-custom">
+  <div class="row">
+
+    <div class="col-md-3 text-center text-light">
+      <div class="card border-danger bg-warning">
+        <div class="card-body">
+          <h3>{{country}} Active</h3>
+          <h1>{{active}}</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 text-center text-light">
+      <div class="card border-danger bg-primary">
+        <div class="card-body">
+          <h3>{{country}} Confirmed</h3>
+          <h1>{{confirmed}}</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 text-center text-light">
+      <div class="card border-danger bg-success">
+        <div class="card-body">
+          <h3>{{country}} Recovered</h3>
+          <h1>{{recovered}}</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 text-center text-light">
+      <div class="card border-danger bg-danger">
+        <div class="card-body">
+          <h3>{{country}} Death</h3>
+          <h1>{{death}}</h1>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footer">
+  <h4 class="text-center p-2 text-light"> -- Copyright &copy; Developed and Designed by Tirtha Sharma -- </h4>
+</div>

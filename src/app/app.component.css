@@ -1,0 +1,28 @@
+.corona-tracker {
+  font-weight: bolder;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: 15px 20px 20px #fff;
+}
+
+.bg-img {
+  background: url("../assets/image/corona.gif");
+  width: 100%;
+  height: 40vh;
+}
+
+.hori {
+  border: 2px solid black;
+}
+
+.card {
+  box-shadow: 10px 5px 5px 10px rgba(250, 179, 179, 0.2);
+}
+
+.footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: blue;
+    position: fixed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
